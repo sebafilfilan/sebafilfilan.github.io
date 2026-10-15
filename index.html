@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,11 +14,16 @@
       box-sizing: border-box;
     }
 
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       font-family: Arial, sans-serif;
       background: #f7f8fc;
       color: #1d2433;
       line-height: 1.6;
+      transition: background 0.3s ease, color 0.3s ease;
     }
 
     header {
@@ -26,113 +32,68 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
+      gap: 20px;
       border-bottom: 1px solid #e7e8ee;
       position: sticky;
       top: 0;
+      z-index: 1000;
+      transition: 0.3s ease;
     }
 
     .logo {
       font-size: 20px;
       font-weight: bold;
       color: #15284b;
+      white-space: nowrap;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 24px;
     }
 
     nav a {
       text-decoration: none;
       color: #374151;
-      margin-left: 24px;
       font-size: 15px;
+      transition: 0.2s ease;
     }
 
-    .language-btn {
-      .header-actions {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.theme-btn {
-  border: 1px solid #15284b;
-  background: #15284b;
-  color: white;
-  padding: 8px 14px;
-  border-radius: 20px;
-  cursor: pointer;
-  transition: 0.3s ease;
-}
-
-.theme-btn:hover,
-.language-btn:hover {
-  transform: translateY(-1px);
-}
-
-body.dark-mode {
-  background: #0f172a;
-  color: #e5e7eb;
-}
-
-body.dark-mode header {
-  background: #111827;
-  border-bottom-color: #25324a;
-}
-
-body.dark-mode .logo,
-body.dark-mode h1,
-body.dark-mode .section-title h2 {
-  color: #f8fafc;
-}
-
-body.dark-mode nav a,
-body.dark-mode .subtitle,
-body.dark-mode .description,
-body.dark-mode .section-title p {
-  color: #cbd5e1;
-}
-
-body.dark-mode .hero {
-  background: #0f172a;
-}
-
-body.dark-mode .quick-info {
-  background: #111827;
-}
-
-body.dark-mode .card {
-  background: #1e293b;
-  border-color: #334155;
-  color: #e5e7eb;
-}
-
-body.dark-mode .photo-placeholder {
-  background: #111827;
-  border-color: #334155;
-}
-
-body.dark-mode .secondary-btn {
-  background: transparent;
-  color: #f8fafc;
-  border-color: #94a3b8;
-}
-
-body.dark-mode footer {
-  background: #020617;
-}
-
-body.dark-mode .language-btn {
-  color: #c4b5fd;
-  border-color: #8b5cf6;
-}
-
-body.dark-mode .theme-btn {
-  background: #7c3aed;
-  border-color: #7c3aed;
-}
-      border: 1px solid #6750a4;
-      background: transparent;
+    nav a:hover {
       color: #6750a4;
+    }
+
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .language-btn,
+    .theme-btn {
       padding: 8px 14px;
       border-radius: 20px;
       cursor: pointer;
+      font-size: 14px;
+      transition: 0.25s ease;
+    }
+
+    .language-btn {
+      border: 1px solid #6750a4;
+      background: transparent;
+      color: #6750a4;
+    }
+
+    .theme-btn {
+      border: 1px solid #15284b;
+      background: #15284b;
+      color: white;
+    }
+
+    .language-btn:hover,
+    .theme-btn:hover {
+      transform: translateY(-1px);
     }
 
     .hero {
@@ -142,6 +103,7 @@ body.dark-mode .theme-btn {
       justify-content: space-between;
       padding: 70px 8%;
       gap: 50px;
+      transition: 0.3s ease;
     }
 
     .hero-text {
@@ -159,6 +121,7 @@ body.dark-mode .theme-btn {
       color: #13284d;
       line-height: 1.1;
       margin-bottom: 20px;
+      transition: 0.3s ease;
     }
 
     .subtitle {
@@ -186,6 +149,7 @@ body.dark-mode .theme-btn {
       padding: 13px 22px;
       border-radius: 10px;
       font-weight: bold;
+      transition: 0.25s ease;
     }
 
     .primary-btn {
@@ -199,27 +163,34 @@ body.dark-mode .theme-btn {
       background: white;
     }
 
- .photo-placeholder {
-  width: 320px;
-  height: 390px;
-  background: white;
-  border-radius: 30px;
-  overflow: hidden;
-  box-shadow: 0 20px 50px rgba(21, 40, 75, 0.12);
-  border: 1px solid #eceef4;
-}
+    .primary-btn:hover,
+    .secondary-btn:hover {
+      transform: translateY(-2px);
+    }
 
-.profile-photo {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-  display: block;
-}
+    .photo-placeholder {
+      width: 320px;
+      height: 390px;
+      background: white;
+      border-radius: 30px;
+      overflow: hidden;
+      box-shadow: 0 20px 50px rgba(21, 40, 75, 0.12);
+      border: 1px solid #eceef4;
+      flex-shrink: 0;
+    }
+
+    .profile-photo {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      display: block;
+    }
 
     .quick-info {
       padding: 70px 8%;
       background: white;
+      transition: 0.3s ease;
     }
 
     .section-title {
@@ -231,6 +202,7 @@ body.dark-mode .theme-btn {
       color: #15284b;
       font-size: 34px;
       margin-bottom: 8px;
+      transition: 0.3s ease;
     }
 
     .section-title p {
@@ -248,6 +220,12 @@ body.dark-mode .theme-btn {
       padding: 28px;
       border-radius: 18px;
       border: 1px solid #eceef4;
+      transition: 0.25s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 30px rgba(21, 40, 75, 0.08);
     }
 
     .card h3 {
@@ -260,13 +238,129 @@ body.dark-mode .theme-btn {
       color: white;
       text-align: center;
       padding: 25px;
-      margin-top: 40px;
+      transition: 0.3s ease;
+    }
+
+    /* DARK MODE */
+
+    body.dark-mode {
+      background: #0f172a;
+      color: #e5e7eb;
+    }
+
+    body.dark-mode header {
+      background: #111827;
+      border-bottom-color: #263247;
+    }
+
+    body.dark-mode .logo,
+    body.dark-mode h1,
+    body.dark-mode .section-title h2 {
+      color: #f8fafc;
+    }
+
+    body.dark-mode nav a {
+      color: #d1d5db;
+    }
+
+    body.dark-mode nav a:hover {
+      color: #c4b5fd;
+    }
+
+    body.dark-mode .hero {
+      background: #0f172a;
+    }
+
+    body.dark-mode .subtitle,
+    body.dark-mode .description,
+    body.dark-mode .section-title p {
+      color: #cbd5e1;
+    }
+
+    body.dark-mode .quick-info {
+      background: #111827;
+    }
+
+    body.dark-mode .card {
+      background: #1e293b;
+      border-color: #334155;
+      color: #e5e7eb;
+    }
+
+    body.dark-mode .card:hover {
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+    }
+
+    body.dark-mode .photo-placeholder {
+      background: #111827;
+      border-color: #334155;
+    }
+
+    body.dark-mode .secondary-btn {
+      background: transparent;
+      color: #f8fafc;
+      border-color: #94a3b8;
+    }
+
+    body.dark-mode .primary-btn {
+      background: #7c3aed;
+    }
+
+    body.dark-mode .language-btn {
+      color: #c4b5fd;
+      border-color: #8b5cf6;
+    }
+
+    body.dark-mode .theme-btn {
+      background: #7c3aed;
+      border-color: #7c3aed;
+    }
+
+    body.dark-mode footer {
+      background: #020617;
+    }
+
+    /* ARABIC */
+
+    html[dir="rtl"] nav {
+      flex-direction: row-reverse;
+    }
+
+    html[dir="rtl"] .hero {
+      direction: rtl;
+    }
+
+    html[dir="rtl"] .buttons {
+      direction: rtl;
+    }
+
+    /* MOBILE */
+
+    @media (max-width: 950px) {
+      nav {
+        display: none;
+      }
     }
 
     @media (max-width: 850px) {
+      header {
+        padding: 15px 5%;
+      }
+
+      .logo {
+        font-size: 17px;
+      }
+
+      .language-btn,
+      .theme-btn {
+        padding: 7px 10px;
+        font-size: 12px;
+      }
+
       .hero {
         flex-direction: column;
         text-align: center;
+        padding: 60px 6%;
       }
 
       h1 {
@@ -281,10 +375,6 @@ body.dark-mode .theme-btn {
         grid-template-columns: 1fr;
       }
 
-      nav {
-        display: none;
-      }
-
       .photo-placeholder {
         width: 100%;
         max-width: 320px;
@@ -293,24 +383,38 @@ body.dark-mode .theme-btn {
   </style>
 </head>
 
+
 <body>
 
   <header>
-    <div class="logo">Seba Filfilan</div>
+
+    <div class="logo" data-en="Seba Filfilan" data-ar="صبا فلفلان">
+      Seba Filfilan
+    </div>
 
     <nav>
-      <a href="#home">Home</a>
-      <a href="#about">About</a>
-      <a href="#experience">Experience</a>
-      <a href="#volunteering">Volunteering</a>
-      <a href="#projects">Projects</a>
-      <a href="#contact">Contact</a>
+      <a href="#home" data-en="Home" data-ar="الرئيسية">Home</a>
+      <a href="#about" data-en="About" data-ar="نبذة عني">About</a>
+      <a href="#experience" data-en="Experience" data-ar="الخبرات">Experience</a>
+      <a href="#volunteering" data-en="Volunteering" data-ar="التطوع">Volunteering</a>
+      <a href="#projects" data-en="Projects" data-ar="المشاريع">Projects</a>
+      <a href="#contact" data-en="Contact" data-ar="تواصل معي">Contact</a>
     </nav>
 
-<div class="header-actions">
-  <button class="theme-btn" id="themeToggle" onclick="toggleTheme()">☾ Dark</button>
-  <button class="language-btn">العربية</button>
-</div>  </header>
+    <div class="header-actions">
+
+      <button class="theme-btn" id="themeToggle">
+        ☾ Dark
+      </button>
+
+      <button class="language-btn" id="languageToggle">
+        العربية
+      </button>
+
+    </div>
+
+  </header>
+
 
   <main>
 
@@ -318,34 +422,66 @@ body.dark-mode .theme-btn {
 
       <div class="hero-text">
 
-        <p class="small-title">
+        <p
+          class="small-title"
+          data-en="Health Services & Hospital Management"
+          data-ar="إدارة الخدمات الصحية والمستشفيات">
           Health Services & Hospital Management
         </p>
 
-        <h1>
+        <h1
+          data-en="Seba Khalid Filfilan"
+          data-ar="صبا خالد فلفلان">
           Seba Khalid Filfilan
         </h1>
 
-        <p class="subtitle">
+        <p
+          class="subtitle"
+          data-en="Healthcare Management | Patient Experience | Volunteering"
+          data-ar="الإدارة الصحية | تجربة المريض | التطوع">
           Healthcare Management | Patient Experience | Volunteering
         </p>
 
-        <p class="description">
+        <p
+          class="description"
+          data-en="Interested in healthcare management, patient experience, academic and training programs, quality improvement, community initiatives, volunteering and professional development."
+          data-ar="مهتمة بالإدارة الصحية، وتجربة المريض، والبرامج الأكاديمية والتدريبية، وتحسين الجودة، والمبادرات المجتمعية، والتطوع، والتطوير المهني.">
           Interested in healthcare management, patient experience,
           academic and training programs, quality improvement,
           community initiatives, volunteering and professional development.
         </p>
 
         <div class="buttons">
-          <a class="primary-btn" href="#about">Explore My Journey</a>
-          <a class="secondary-btn" href="#contact">Contact Me</a>
+
+          <a
+            class="primary-btn"
+            href="#about"
+            data-en="Explore My Journey"
+            data-ar="استكشف مسيرتي">
+            Explore My Journey
+          </a>
+
+          <a
+            class="secondary-btn"
+            href="#contact"
+            data-en="Contact Me"
+            data-ar="تواصل معي">
+            Contact Me
+          </a>
+
         </div>
 
       </div>
 
+
       <div class="photo-placeholder">
-  <img src="IMG_7357.jpg" alt="Seba Khalid Filfilan" class="profile-photo">
-</div>
+
+        <img
+          src="IMG_7357.jpg"
+          alt="Seba Khalid Filfilan"
+          class="profile-photo">
+
+      </div>
 
     </section>
 
@@ -353,34 +489,75 @@ body.dark-mode .theme-btn {
     <section class="quick-info" id="about">
 
       <div class="section-title">
-        <h2>My Professional Journey</h2>
-        <p>A quick overview of the main areas that define my experience.</p>
+
+        <h2
+          data-en="My Professional Journey"
+          data-ar="مسيرتي المهنية">
+          My Professional Journey
+        </h2>
+
+        <p
+          data-en="A quick overview of the main areas that define my experience."
+          data-ar="نظرة سريعة على أبرز المجالات التي تشكل خبرتي ومسيرتي.">
+          A quick overview of the main areas that define my experience.
+        </p>
+
       </div>
+
 
       <div class="cards">
 
         <div class="card">
-          <h3>Healthcare</h3>
-          <p>
+
+          <h3
+            data-en="Healthcare"
+            data-ar="الإدارة الصحية">
+            Healthcare
+          </h3>
+
+          <p
+            data-en="Experience and interests in healthcare administration, hospital management and patient experience."
+            data-ar="خبرة واهتمام في الإدارة الصحية وإدارة المستشفيات وتجربة المريض.">
             Experience and interests in healthcare administration,
             hospital management and patient experience.
           </p>
+
         </div>
 
+
         <div class="card">
-          <h3>Academic & Training</h3>
-          <p>
+
+          <h3
+            data-en="Academic & Training"
+            data-ar="الشؤون الأكاديمية والتدريب">
+            Academic & Training
+          </h3>
+
+          <p
+            data-en="Experience supporting fellowship programs, postgraduate training and Saudi Board-related processes."
+            data-ar="خبرة في دعم برامج الزمالات والتدريب والدراسات العليا والإجراءات المتعلقة بالبورد السعودي.">
             Experience supporting fellowship programs,
             postgraduate training and Saudi Board-related processes.
           </p>
+
         </div>
 
+
         <div class="card">
-          <h3>Volunteering</h3>
-          <p>
+
+          <h3
+            data-en="Volunteering"
+            data-ar="التطوع">
+            Volunteering
+          </h3>
+
+          <p
+            data-en="Four years of volunteering across healthcare, academic, community and event-related fields."
+            data-ar="أربع سنوات من الخبرة التطوعية في المجالات الصحية والأكاديمية والمجتمعية والفعاليات.">
             Four years of volunteering across healthcare,
             academic, community and event-related fields.
           </p>
+
         </div>
 
       </div>
@@ -389,34 +566,102 @@ body.dark-mode .theme-btn {
 
   </main>
 
-  <footer>
-    © 2026 Seba Khalid Filfilan
+
+  <footer id="contact">
+
+    <span
+      data-en="© 2026 Seba Khalid Filfilan"
+      data-ar="© 2026 صبا خالد فلفلان">
+      © 2026 Seba Khalid Filfilan
+    </span>
+
   </footer>
 
-<script>
-  function toggleTheme() {
-    document.body.classList.toggle("dark-mode");
+
+  <script>
 
     const themeToggle = document.getElementById("themeToggle");
+    const languageToggle = document.getElementById("languageToggle");
 
-    if (document.body.classList.contains("dark-mode")) {
-      themeToggle.textContent = "☀ Light";
-      localStorage.setItem("theme", "dark");
-    } else {
-      themeToggle.textContent = "☾ Dark";
-      localStorage.setItem("theme", "light");
-    }
-  }
+    /* DARK MODE */
 
-  window.addEventListener("load", function () {
     const savedTheme = localStorage.getItem("theme");
 
     if (savedTheme === "dark") {
       document.body.classList.add("dark-mode");
-      document.getElementById("themeToggle").textContent = "☀ Light";
+      themeToggle.textContent = "☀ Light";
     }
-  });
-</script>
-  
+
+    themeToggle.addEventListener("click", function () {
+
+      document.body.classList.toggle("dark-mode");
+
+      if (document.body.classList.contains("dark-mode")) {
+
+        themeToggle.textContent = "☀ Light";
+        localStorage.setItem("theme", "dark");
+
+      } else {
+
+        themeToggle.textContent = "☾ Dark";
+        localStorage.setItem("theme", "light");
+
+      }
+
+    });
+
+
+    /* LANGUAGE */
+
+    function setLanguage(language) {
+
+      const elements = document.querySelectorAll("[data-en][data-ar]");
+
+      elements.forEach(function (element) {
+
+        element.textContent = element.getAttribute(
+          language === "ar" ? "data-ar" : "data-en"
+        );
+
+      });
+
+      if (language === "ar") {
+
+        document.documentElement.lang = "ar";
+        document.documentElement.dir = "rtl";
+        languageToggle.textContent = "English";
+
+      } else {
+
+        document.documentElement.lang = "en";
+        document.documentElement.dir = "ltr";
+        languageToggle.textContent = "العربية";
+
+      }
+
+      localStorage.setItem("language", language);
+    }
+
+
+    const savedLanguage = localStorage.getItem("language") || "en";
+
+    setLanguage(savedLanguage);
+
+
+    languageToggle.addEventListener("click", function () {
+
+      const currentLanguage = document.documentElement.lang;
+
+      if (currentLanguage === "ar") {
+        setLanguage("en");
+      } else {
+        setLanguage("ar");
+      }
+
+    });
+
+  </script>
+
 </body>
+
 </html>

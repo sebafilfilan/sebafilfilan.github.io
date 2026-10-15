@@ -1,14 +1,309 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Seba Khalid Filfilan</title>
+
+  <title>Seba Khalid Filfilan | Portfolio</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #f7f8fc;
+      color: #1d2433;
+      line-height: 1.6;
+    }
+
+    header {
+      background: white;
+      padding: 18px 8%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #e7e8ee;
+      position: sticky;
+      top: 0;
+    }
+
+    .logo {
+      font-size: 20px;
+      font-weight: bold;
+      color: #15284b;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #374151;
+      margin-left: 24px;
+      font-size: 15px;
+    }
+
+    .language-btn {
+      border: 1px solid #6750a4;
+      background: transparent;
+      color: #6750a4;
+      padding: 8px 14px;
+      border-radius: 20px;
+      cursor: pointer;
+    }
+
+    .hero {
+      min-height: 85vh;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 70px 8%;
+      gap: 50px;
+    }
+
+    .hero-text {
+      max-width: 620px;
+    }
+
+    .small-title {
+      color: #6750a4;
+      font-weight: bold;
+      margin-bottom: 12px;
+    }
+
+    h1 {
+      font-size: 52px;
+      color: #13284d;
+      line-height: 1.1;
+      margin-bottom: 20px;
+    }
+
+    .subtitle {
+      font-size: 20px;
+      color: #596275;
+      margin-bottom: 20px;
+    }
+
+    .description {
+      font-size: 17px;
+      color: #6b7280;
+      margin-bottom: 30px;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .primary-btn,
+    .secondary-btn {
+      display: inline-block;
+      text-decoration: none;
+      padding: 13px 22px;
+      border-radius: 10px;
+      font-weight: bold;
+    }
+
+    .primary-btn {
+      background: #15284b;
+      color: white;
+    }
+
+    .secondary-btn {
+      border: 1px solid #15284b;
+      color: #15284b;
+      background: white;
+    }
+
+    .photo-placeholder {
+      width: 320px;
+      height: 390px;
+      background: linear-gradient(145deg, #15284b, #7656ad);
+      border-radius: 30px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      text-align: center;
+      padding: 30px;
+      box-shadow: 0 20px 50px rgba(21, 40, 75, 0.18);
+    }
+
+    .quick-info {
+      padding: 70px 8%;
+      background: white;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .section-title h2 {
+      color: #15284b;
+      font-size: 34px;
+      margin-bottom: 8px;
+    }
+
+    .section-title p {
+      color: #7a8191;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .card {
+      background: #f8f9fc;
+      padding: 28px;
+      border-radius: 18px;
+      border: 1px solid #eceef4;
+    }
+
+    .card h3 {
+      color: #6750a4;
+      margin-bottom: 10px;
+    }
+
+    footer {
+      background: #13284d;
+      color: white;
+      text-align: center;
+      padding: 25px;
+      margin-top: 40px;
+    }
+
+    @media (max-width: 850px) {
+      .hero {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      h1 {
+        font-size: 40px;
+      }
+
+      .buttons {
+        justify-content: center;
+      }
+
+      .cards {
+        grid-template-columns: 1fr;
+      }
+
+      nav {
+        display: none;
+      }
+
+      .photo-placeholder {
+        width: 100%;
+        max-width: 320px;
+      }
+    }
+  </style>
 </head>
+
 <body>
 
-  <h1>Seba Khalid Filfilan</h1>
-  <p>Personal Portfolio Website</p>
+  <header>
+    <div class="logo">Seba Filfilan</div>
+
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#volunteering">Volunteering</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <button class="language-btn">العربية</button>
+  </header>
+
+  <main>
+
+    <section class="hero" id="home">
+
+      <div class="hero-text">
+
+        <p class="small-title">
+          Health Services & Hospital Management
+        </p>
+
+        <h1>
+          Seba Khalid Filfilan
+        </h1>
+
+        <p class="subtitle">
+          Healthcare Management | Patient Experience | Volunteering
+        </p>
+
+        <p class="description">
+          Interested in healthcare management, patient experience,
+          academic and training programs, quality improvement,
+          community initiatives, volunteering and professional development.
+        </p>
+
+        <div class="buttons">
+          <a class="primary-btn" href="#about">Explore My Journey</a>
+          <a class="secondary-btn" href="#contact">Contact Me</a>
+        </div>
+
+      </div>
+
+      <div class="photo-placeholder">
+        Your professional photo will be added here later.
+      </div>
+
+    </section>
+
+
+    <section class="quick-info" id="about">
+
+      <div class="section-title">
+        <h2>My Professional Journey</h2>
+        <p>A quick overview of the main areas that define my experience.</p>
+      </div>
+
+      <div class="cards">
+
+        <div class="card">
+          <h3>Healthcare</h3>
+          <p>
+            Experience and interests in healthcare administration,
+            hospital management and patient experience.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Academic & Training</h3>
+          <p>
+            Experience supporting fellowship programs,
+            postgraduate training and Saudi Board-related processes.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Volunteering</h3>
+          <p>
+            Four years of volunteering across healthcare,
+            academic, community and event-related fields.
+          </p>
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <footer>
+    © 2026 Seba Khalid Filfilan
+  </footer>
 
 </body>
 </html>

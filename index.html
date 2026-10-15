@@ -308,7 +308,7 @@ body.dark-mode .theme-btn {
     </nav>
 
 <div class="header-actions">
-  <button class="theme-btn" id="themeToggle">☾ Dark</button>
+  <button class="theme-btn" id="themeToggle" onclick="toggleTheme()">☾ Dark</button>
   <button class="language-btn">العربية</button>
 </div>  </header>
 
@@ -394,25 +394,27 @@ body.dark-mode .theme-btn {
   </footer>
 
 <script>
-  document.addEventListener("DOMContentLoaded", function () {
+  function toggleTheme() {
+    document.body.classList.toggle("dark-mode");
+
     const themeToggle = document.getElementById("themeToggle");
 
-    if (localStorage.getItem("theme") === "dark") {
-      document.body.classList.add("dark-mode");
+    if (document.body.classList.contains("dark-mode")) {
       themeToggle.textContent = "☀ Light";
+      localStorage.setItem("theme", "dark");
+    } else {
+      themeToggle.textContent = "☾ Dark";
+      localStorage.setItem("theme", "light");
     }
+  }
 
-    themeToggle.addEventListener("click", function () {
-      document.body.classList.toggle("dark-mode");
+  window.addEventListener("load", function () {
+    const savedTheme = localStorage.getItem("theme");
 
-      if (document.body.classList.contains("dark-mode")) {
-        themeToggle.textContent = "☀ Light";
-        localStorage.setItem("theme", "dark");
-      } else {
-        themeToggle.textContent = "☾ Dark";
-        localStorage.setItem("theme", "light");
-      }
-    });
+    if (savedTheme === "dark") {
+      document.body.classList.add("dark-mode");
+      document.getElementById("themeToggle").textContent = "☀ Light";
+    }
   });
 </script>
   

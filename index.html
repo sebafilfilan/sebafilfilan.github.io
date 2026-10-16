@@ -48,36 +48,43 @@
     }
 
     nav {
-      display: flex;
-      align-items: center;
-      gap: 24px;
-    }
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
 
     nav a {
-      text-decoration: none;
-      color: #374151;
-      font-size: 15px;
-      transition: 0.2s ease;
-    }
+  text-decoration: none;
+  color: #374151;
+  font-size: 14px;
+  font-weight: 500;
+  transition: 0.2s ease;
+  white-space: nowrap;
+}
 
     nav a:hover {
       color: #6750a4;
     }
 
     .header-actions {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
 
     .language-btn,
-    .theme-btn {
-      padding: 8px 14px;
-      border-radius: 20px;
-      cursor: pointer;
-      font-size: 14px;
-      transition: 0.25s ease;
-    }
+.theme-btn {
+  padding: 8px 13px;
+  border-radius: 999px;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 600;
+  transition: 0.25s ease;
+  min-width: 82px;
+}
 
     .language-btn {
       border: 1px solid #6750a4;
@@ -97,14 +104,14 @@
     }
 
     .hero {
-      min-height: 85vh;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 70px 8%;
-      gap: 50px;
-      transition: 0.3s ease;
-    }
+  min-height: 82vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 60px 8% 70px;
+  gap: 60px;
+  transition: 0.3s ease;
+}
 
     .hero-text {
       max-width: 620px;
@@ -117,12 +124,13 @@
     }
 
     h1 {
-      font-size: 52px;
-      color: #13284d;
-      line-height: 1.1;
-      margin-bottom: 20px;
-      transition: 0.3s ease;
-    }
+  font-size: 50px;
+  color: #13284d;
+  line-height: 1.12;
+  margin-bottom: 18px;
+  letter-spacing: -0.5px;
+  transition: 0.3s ease;
+}
 
     .subtitle {
       font-size: 20px;
@@ -393,13 +401,15 @@
     </div>
 
     <nav>
-      <a href="#home" data-en="Home" data-ar="الرئيسية">Home</a>
-      <a href="#about" data-en="About" data-ar="نبذة عني">About</a>
-      <a href="#experience" data-en="Experience" data-ar="الخبرات">Experience</a>
-      <a href="#volunteering" data-en="Volunteering" data-ar="التطوع">Volunteering</a>
-      <a href="#projects" data-en="Projects" data-ar="المشاريع">Projects</a>
-      <a href="#contact" data-en="Contact" data-ar="تواصل معي">Contact</a>
-    </nav>
+  <a href="#home" data-en="Home" data-ar="الرئيسية">Home</a>
+  <a href="#about" data-en="About" data-ar="نبذة عني">About</a>
+  <a href="#experience" data-en="Experience" data-ar="الخبرات">Experience</a>
+  <a href="#volunteering" data-en="Volunteering" data-ar="التطوع">Volunteering</a>
+  <a href="#certificates" data-en="Certificates" data-ar="الشهادات">Certificates</a>
+  <a href="#projects" data-en="Projects" data-ar="المشاريع">Projects</a>
+  <a href="#events" data-en="Events" data-ar="الفعاليات">Events</a>
+  <a href="#contact" data-en="Contact" data-ar="تواصل معي">Contact</a>
+</nav>
 
     <div class="header-actions">
 

@@ -674,7 +674,131 @@ body.dark-mode .about-intro p {
   </div>
 
 </section>
+<section class="experience-section reveal" id="experience">
 
+  <div class="section-title">
+
+    <h2
+      data-en="Professional Experience"
+      data-ar="الخبرات المهنية">
+      Professional Experience
+    </h2>
+
+    <p
+      data-en="A selection of experiences that have shaped my professional development in healthcare administration, training, quality, and patient safety."
+      data-ar="مجموعة من الخبرات التي أسهمت في تطوير مسيرتي المهنية في الإدارة الصحية والتدريب والجودة وسلامة المرضى.">
+      A selection of experiences that have shaped my professional development in healthcare administration, training, quality, and patient safety.
+    </p>
+
+  </div>
+
+
+  <div class="experience-timeline">
+
+    <div class="experience-item reveal">
+
+      <div class="experience-dot"></div>
+
+      <div class="experience-content">
+
+        <div class="experience-top">
+
+          <div>
+
+            <h3
+              data-en="Coordinator of Fellowships, Saudi Board & Postgraduate Programs"
+              data-ar="منسقة الزمالات والبورد السعودي والدراسات العليا">
+              Coordinator of Fellowships, Saudi Board & Postgraduate Programs
+            </h3>
+
+            <h4
+              data-en="King Fahd General Hospital | Kafu Tamheer Program"
+              data-ar="مستشفى الملك فهد العام | برنامج كفو تمهير">
+              King Fahd General Hospital | Kafu Tamheer Program
+            </h4>
+
+          </div>
+
+          <span
+            class="experience-date"
+            data-en="2025 – 2026"
+            data-ar="2025 – 2026">
+            2025 – 2026
+          </span>
+
+        </div>
+
+        <p
+          data-en="Coordinated fellowship, Saudi Board, and postgraduate training processes, including internal and external training requests, trainee support, accreditation preparation, official correspondence, reporting, and administrative follow-up."
+          data-ar="تنسيق أعمال الزمالات والبورد السعودي وبرامج الدراسات العليا، بما يشمل طلبات التدريب الداخلي والخارجي، ودعم المتدربين، والاستعداد للاعتماد، والمراسلات الرسمية، والتقارير، والمتابعة الإدارية.">
+          Coordinated fellowship, Saudi Board, and postgraduate training processes, including internal and external training requests, trainee support, accreditation preparation, official correspondence, reporting, and administrative follow-up.
+        </p>
+
+        <div class="experience-tags">
+          <span>Training Coordination</span>
+          <span>Accreditation</span>
+          <span>Saudi Board</span>
+          <span>Reporting</span>
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <div class="experience-item reveal">
+
+      <div class="experience-dot"></div>
+
+      <div class="experience-content">
+
+        <div class="experience-top">
+
+          <div>
+
+            <h3
+              data-en="Quality & Patient Safety Management Intern"
+              data-ar="متدربة في إدارة الجودة وسلامة المرضى">
+              Quality & Patient Safety Management Intern
+            </h3>
+
+            <h4
+              data-en="East Jeddah Hospital | Cooperative Training"
+              data-ar="مستشفى شرق جدة | تدريب تعاوني">
+              East Jeddah Hospital | Cooperative Training
+            </h4>
+
+          </div>
+
+          <span
+            class="experience-date"
+            data-en="2023"
+            data-ar="2023">
+            2023
+          </span>
+
+        </div>
+
+        <p
+          data-en="Supported accreditation readiness, quality improvement initiatives, performance indicator monitoring, and the implementation of professional practices aimed at improving patient safety and organizational performance."
+          data-ar="المساهمة في الاستعداد للاعتماد، ومبادرات تحسين الجودة، ومتابعة مؤشرات الأداء، وتطبيق الممارسات المهنية الهادفة إلى تعزيز سلامة المرضى وتحسين الأداء المؤسسي.">
+          Supported accreditation readiness, quality improvement initiatives, performance indicator monitoring, and the implementation of professional practices aimed at improving patient safety and organizational performance.
+        </p>
+
+        <div class="experience-tags">
+          <span>Quality Improvement</span>
+          <span>Patient Safety</span>
+          <span>KPI Monitoring</span>
+          <span>Accreditation</span>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
   </main>
 
 
@@ -693,7 +817,180 @@ body.dark-mode .about-intro p {
 
     const themeToggle = document.getElementById("themeToggle");
     const languageToggle = document.getElementById("languageToggle");
+/* EXPERIENCE TIMELINE */
 
+.experience-section {
+  padding: 80px 8%;
+  background: #f7f8fc;
+}
+
+.experience-timeline {
+  position: relative;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding-left: 30px;
+}
+
+.experience-timeline::before {
+  content: "";
+  position: absolute;
+  left: 8px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: #d8dceb;
+}
+
+.experience-item {
+  position: relative;
+  margin-bottom: 34px;
+}
+
+.experience-dot {
+  position: absolute;
+  left: -30px;
+  top: 30px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #6750a4;
+  border: 4px solid #f7f8fc;
+  box-shadow: 0 0 0 2px #6750a4;
+}
+
+.experience-content {
+  background: white;
+  border: 1px solid #eceef4;
+  border-radius: 18px;
+  padding: 28px;
+  box-shadow: 0 10px 30px rgba(21, 40, 75, 0.06);
+}
+
+.experience-top {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  align-items: flex-start;
+  margin-bottom: 14px;
+}
+
+.experience-content h3 {
+  color: #15284b;
+  font-size: 21px;
+  margin-bottom: 6px;
+}
+
+.experience-content h4 {
+  color: #6750a4;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.experience-content p {
+  color: #6b7280;
+  line-height: 1.8;
+}
+
+.experience-date {
+  color: #6750a4;
+  font-size: 13px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.experience-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 18px;
+}
+
+.experience-tags span {
+  background: #f1edff;
+  color: #6750a4;
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+/* EXPERIENCE DARK MODE */
+
+body.dark-mode .experience-section {
+  background: #0f172a;
+}
+
+body.dark-mode .experience-timeline::before {
+  background: #334155;
+}
+
+body.dark-mode .experience-dot {
+  background: #8b5cf6;
+  border-color: #0f172a;
+  box-shadow: 0 0 0 2px #8b5cf6;
+}
+
+body.dark-mode .experience-content {
+  background: #1e293b;
+  border-color: #334155;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+body.dark-mode .experience-content h3 {
+  color: #f8fafc;
+}
+
+body.dark-mode .experience-content h4,
+body.dark-mode .experience-date {
+  color: #a78bfa;
+}
+
+body.dark-mode .experience-content p {
+  color: #cbd5e1;
+}
+
+body.dark-mode .experience-tags span {
+  background: #2e1065;
+  color: #c4b5fd;
+}
+
+/* EXPERIENCE RTL */
+
+html[dir="rtl"] .experience-timeline {
+  padding-left: 0;
+  padding-right: 30px;
+}
+
+html[dir="rtl"] .experience-timeline::before {
+  left: auto;
+  right: 8px;
+}
+
+html[dir="rtl"] .experience-dot {
+  left: auto;
+  right: -30px;
+}
+
+/* EXPERIENCE MOBILE */
+
+@media (max-width: 700px) {
+  .experience-section {
+    padding: 60px 6%;
+  }
+
+  .experience-top {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .experience-date {
+    white-space: normal;
+  }
+
+  .experience-content {
+    padding: 22px;
+  }
+}
     /* DARK MODE */
 
     const savedTheme = localStorage.getItem("theme");

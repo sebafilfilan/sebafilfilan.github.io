@@ -248,7 +248,26 @@
       padding: 25px;
       transition: 0.3s ease;
     }
+/* SCROLL REVEAL */
 
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
     /* DARK MODE */
 
     body.dark-mode {
@@ -428,8 +447,7 @@
 
   <main>
 
-    <section class="hero" id="home">
-
+<section class="hero reveal" id="home">
       <div class="hero-text">
 
         <p
@@ -496,8 +514,7 @@
     </section>
 
 
-    <section class="quick-info" id="about">
-
+<section class="quick-info reveal" id="about">
       <div class="section-title">
 
         <h2
@@ -517,7 +534,7 @@
 
       <div class="cards">
 
-        <div class="card">
+        <div class="card reveal">
 
           <h3
             data-en="Healthcare"
@@ -669,7 +686,26 @@
       }
 
     });
+/* SCROLL REVEAL */
 
+const revealElements = document.querySelectorAll(".reveal");
+
+const revealObserver = new IntersectionObserver(
+  function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("active");
+      }
+    });
+  },
+  {
+    threshold: 0.15
+  }
+);
+
+revealElements.forEach(function (element) {
+  revealObserver.observe(element);
+});
   </script>
 
 </body>

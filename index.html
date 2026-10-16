@@ -194,7 +194,42 @@
       object-position: center;
       display: block;
     }
+.about-intro {
+  max-width: 850px;
+  margin: 0 auto 40px;
+  text-align: center;
+}
 
+.about-intro p {
+  color: #6b7280;
+  font-size: 17px;
+  line-height: 1.8;
+  margin-bottom: 14px;
+}
+
+.about-cards {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+body.dark-mode .about-intro p {
+  color: #cbd5e1;
+}
+
+@media (max-width: 1000px) {
+  .about-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 650px) {
+  .about-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .about-intro {
+    text-align: center;
+  }
+}
     .quick-info {
       padding: 70px 8%;
       background: white;
@@ -525,81 +560,120 @@
 
 
 <section class="quick-info reveal" id="about">
-      <div class="section-title">
 
-        <h2
-          data-en="My Professional Journey"
-          data-ar="مسيرتي المهنية">
-          My Professional Journey
-        </h2>
+  <div class="section-title">
 
-        <p
-          data-en="A quick overview of the main areas that define my experience."
-          data-ar="نظرة سريعة على أبرز المجالات التي تشكل خبرتي ومسيرتي.">
-          A quick overview of the main areas that define my experience.
-        </p>
+    <h2
+      data-en="About Me"
+      data-ar="نبذة عني">
+      About Me
+    </h2>
 
-      </div>
+    <p
+      data-en="A glimpse into my background, professional interests, and the areas I am passionate about developing."
+      data-ar="لمحة عن خلفيتي واهتماماتي المهنية والمجالات التي أسعى إلى التطور فيها.">
+      A glimpse into my background, professional interests, and the areas I am passionate about developing.
+    </p>
 
-
-      <div class="cards">
-
-        <div class="card reveal">
-
-          <h3
-            data-en="Healthcare"
-            data-ar="الإدارة الصحية">
-            Healthcare
-          </h3>
-
-          <p
-            data-en="Experience and interests in healthcare administration, hospital management and patient experience."
-            data-ar="خبرة واهتمام في الإدارة الصحية وإدارة المستشفيات وتجربة المريض.">
-            Experience and interests in healthcare administration,
-            hospital management and patient experience.
-          </p>
-
-        </div>
+  </div>
 
 
-        <div class="card reveal">
+  <div class="about-intro">
 
-          <h3
-            data-en="Academic & Training"
-            data-ar="الشؤون الأكاديمية والتدريب">
-            Academic & Training
-          </h3>
+    <p
+      data-en="I hold a degree in Health Services and Hospital Management from King Abdulaziz University. My professional interests span healthcare administration, patient experience, quality improvement, academic and training programs, volunteering, community impact, and sports event operations."
+      data-ar="حاصلة على درجة جامعية في إدارة الخدمات الصحية والمستشفيات من جامعة الملك عبدالعزيز. تمتد اهتماماتي المهنية إلى الإدارة الصحية، وتجربة المريض، وتحسين الجودة، والبرامج الأكاديمية والتدريبية، والتطوع والأثر المجتمعي، إضافة إلى تنظيم وتشغيل الفعاليات والبطولات الرياضية.">
+      I hold a degree in Health Services and Hospital Management from King Abdulaziz University. My professional interests span healthcare administration, patient experience, quality improvement, academic and training programs, volunteering, community impact, and sports event operations.
+    </p>
 
-          <p
-            data-en="Experience supporting fellowship programs, postgraduate training and Saudi Board-related processes."
-            data-ar="خبرة في دعم برامج الزمالات والتدريب والدراسات العليا والإجراءات المتعلقة بالبورد السعودي.">
-            Experience supporting fellowship programs,
-            postgraduate training and Saudi Board-related processes.
-          </p>
+    <p
+      data-en="I am especially interested in opportunities that combine coordination, service quality, teamwork, communication, continuous improvement, and meaningful community contribution."
+      data-ar="وأهتم بشكل خاص بالفرص التي تجمع بين التنسيق، وجودة الخدمة، والعمل الجماعي، والتواصل، والتحسين المستمر، وصناعة أثر مجتمعي ملموس.">
+      I am especially interested in opportunities that combine coordination, service quality, teamwork, communication, continuous improvement, and meaningful community contribution.
+    </p>
 
-        </div>
+  </div>
 
 
-        <div class="card reveal">
+  <div class="cards about-cards">
 
-          <h3
-            data-en="Volunteering"
-            data-ar="التطوع">
-            Volunteering
-          </h3>
+    <div class="card reveal">
+      <h3
+        data-en="Healthcare Management"
+        data-ar="الإدارة الصحية">
+        Healthcare Management
+      </h3>
 
-          <p
-            data-en="Four years of volunteering across healthcare, academic, community and event-related fields."
-            data-ar="أربع سنوات من الخبرة التطوعية في المجالات الصحية والأكاديمية والمجتمعية والفعاليات.">
-            Four years of volunteering across healthcare,
-            academic, community and event-related fields.
-          </p>
+      <p
+        data-en="Healthcare administration, hospital operations, and improving service delivery."
+        data-ar="الإدارة الصحية وتشغيل المنشآت وتحسين تقديم الخدمات الصحية.">
+        Healthcare administration, hospital operations, and improving service delivery.
+      </p>
+    </div>
 
-        </div>
 
-      </div>
+    <div class="card reveal">
+      <h3
+        data-en="Patient Experience & Quality"
+        data-ar="تجربة المريض والجودة">
+        Patient Experience & Quality
+      </h3>
 
-    </section>
+      <p
+        data-en="Enhancing patient experience, service quality, and continuous improvement."
+        data-ar="تطوير تجربة المريض وجودة الخدمات والتحسين المستمر.">
+        Enhancing patient experience, service quality, and continuous improvement.
+      </p>
+    </div>
+
+
+    <div class="card reveal">
+      <h3
+        data-en="Academic & Training"
+        data-ar="الشؤون الأكاديمية والتدريب">
+        Academic & Training
+      </h3>
+
+      <p
+        data-en="Academic programs, professional training, fellowships, and postgraduate development."
+        data-ar="البرامج الأكاديمية والتدريب المهني والزمالات والتطوير في الدراسات العليا.">
+        Academic programs, professional training, fellowships, and postgraduate development.
+      </p>
+    </div>
+
+
+    <div class="card reveal">
+      <h3
+        data-en="Volunteering & Community Impact"
+        data-ar="التطوع والأثر المجتمعي">
+        Volunteering & Community Impact
+      </h3>
+
+      <p
+        data-en="Community initiatives, volunteering, and creating meaningful social impact."
+        data-ar="المبادرات المجتمعية والتطوع والمساهمة في صناعة أثر إيجابي.">
+        Community initiatives, volunteering, and creating meaningful social impact.
+      </p>
+    </div>
+
+
+    <div class="card reveal">
+      <h3
+        data-en="Sports Events & Operations"
+        data-ar="الفعاليات والعمليات الرياضية">
+        Sports Events & Operations
+      </h3>
+
+      <p
+        data-en="Tournament operations, accreditation, protocol support, coordination, and event delivery."
+        data-ar="تشغيل البطولات والتصاريح ودعم البروتوكول والتنسيق وتنفيذ الفعاليات.">
+        Tournament operations, accreditation, protocol support, coordination, and event delivery.
+      </p>
+    </div>
+
+  </div>
+
+</section>
 
   </main>
 

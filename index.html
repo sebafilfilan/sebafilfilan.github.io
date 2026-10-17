@@ -568,6 +568,18 @@ html[dir="rtl"] .experience-card {
     width: 100%;
   }
 }
+    #certificates .volunteering-card:nth-child(5) {
+  grid-column: 1 / -1;
+  justify-self: center;
+  width: calc(50% - 12px);
+}
+
+@media (max-width: 650px) {
+  #certificates .volunteering-card:nth-child(5) {
+    grid-column: auto;
+    width: 100%;
+  }
+}
 .volunteering-card:nth-child(1) {
   order: 2;
 }

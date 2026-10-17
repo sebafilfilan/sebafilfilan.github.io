@@ -557,6 +557,17 @@ html[dir="rtl"] .experience-card {
   grid-template-columns: repeat(2, 1fr);
   gap: 24px;
 }
+    #events .volunteering-card:nth-child(3) {
+  grid-column: 1 / -1;
+  justify-self: center;
+  width: calc(50% - 12px);
+}
+    @media (max-width: 650px) {
+  #events .volunteering-card:nth-child(3) {
+    grid-column: auto;
+    width: 100%;
+  }
+}
 .volunteering-card:nth-child(1) {
   order: 2;
 }

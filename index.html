@@ -826,6 +826,41 @@ html[dir="rtl"] .volunteering-card {
     grid-template-columns: 1fr;
   }
 }
+    .event-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  margin-top: 18px;
+}
+
+.event-gallery a {
+  display: block;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.event-gallery img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  display: block;
+  cursor: zoom-in;
+  transition: transform 0.3s ease;
+}
+
+.event-gallery img:hover {
+  transform: scale(1.03);
+}
+
+@media (max-width: 650px) {
+  .event-gallery {
+    grid-template-columns: 1fr;
+  }
+
+  .event-gallery img {
+    height: auto;
+  }
+}
   </style>
 </head>
 
@@ -1423,6 +1458,17 @@ html[dir="rtl"] .volunteering-card {
         January 2025
       </p>
 
+      <div class="event-gallery">
+
+  <a href="u23-team.jpg" target="_blank" rel="noopener">
+    <img src="u23-team.jpg" alt="AFC U23 Asian Cup Saudi Arabia 2026 Team">
+  </a>
+
+  <a href="u23-trophy.jpg" target="_blank" rel="noopener">
+    <img src="u23-trophy.jpg" alt="AFC U23 Asian Cup Saudi Arabia 2026 Trophy">
+  </a>
+
+</div>
     </div>
 
   </div>

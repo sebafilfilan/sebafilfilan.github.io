@@ -560,7 +560,8 @@ html[dir="rtl"] .experience-card {
     #events .volunteering-grid {
   align-items: start;
 }
-    #events .event-left-card {
+
+#events .event-left-card {
   grid-column: 1;
   grid-row: 1;
 }
@@ -569,19 +570,20 @@ html[dir="rtl"] .experience-card {
   grid-column: 2;
   grid-row: 1;
 }
-    #events .event-wide-card {
-  grid-column: 1 / -1;
-  width: 100%;
-}
-    #events .event-center-card {
+
+#events .event-center-card {
   grid-column: 1 / -1 !important;
+  grid-row: 2;
   justify-self: center !important;
   width: calc(50% - 12px) !important;
 }
-}
-    @media (max-width: 650px) {
+
+@media (max-width: 650px) {
+  #events .event-left-card,
+  #events .event-right-card,
   #events .event-center-card {
-    grid-column: auto !important;
+    grid-column: 1 !important;
+    grid-row: auto !important;
     width: 100% !important;
   }
 }

@@ -947,6 +947,18 @@ body.dark-mode .contact-link {
     width: 100% !important;
   }
 }
+    #certificates .certificate-center-card {
+  grid-column: 1 / -1;
+  justify-self: center;
+  width: calc(50% - 12px);
+}
+
+@media (max-width: 650px) {
+  #certificates .certificate-center-card {
+    grid-column: auto;
+    width: 100%;
+  }
+}
   </style>
 </head>
 
@@ -1761,7 +1773,7 @@ body.dark-mode .contact-link {
     </div>
 
 
-    <div class="volunteering-card reveal" style="order: 0;">
+    <div class="volunteering-card reveal certificate-center-card" style="order: 0;">
 
       <span
         class="volunteering-category"

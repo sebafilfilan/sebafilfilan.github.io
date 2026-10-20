@@ -43,7 +43,18 @@ h3 {
       z-index: 1000;
       transition: 0.3s ease;
     }
+html[dir="rtl"] header {
+  direction: ltr;
+}
 
+html[dir="rtl"] header nav,
+html[dir="rtl"] .header-actions {
+  direction: rtl;
+}
+
+html[dir="rtl"] header .logo {
+  direction: rtl;
+}
     .logo {
       font-size: 20px;
       font-weight: bold;

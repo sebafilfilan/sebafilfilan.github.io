@@ -560,24 +560,37 @@ html[dir="rtl"] .experience-card {
     #events .volunteering-grid {
   align-items: start;
 }
+#events .volunteering-grid {
+  align-items: start;
+}
 
 #events .event-left-card {
   grid-column: 1;
   grid-row: 1;
 }
 
-#events .event-right-card {
-  grid-column: 2;
-  grid-row: 1;
-}
-
 #events .event-center-card {
-  grid-column: 1 / -1 !important;
-  grid-row: 2;
-  justify-self: center !important;
-  width: calc(50% - 12px) !important;
+  grid-column: 2 !important;
+  grid-row: 1;
+  justify-self: stretch !important;
+  width: 100% !important;
 }
 
+#events .event-right-card {
+  grid-column: 1 / -1;
+  grid-row: 2;
+  width: 100%;
+}
+
+@media (max-width: 650px) {
+  #events .event-left-card,
+  #events .event-center-card,
+  #events .event-right-card {
+    grid-column: 1 !important;
+    grid-row: auto !important;
+    width: 100% !important;
+  }
+}
 @media (max-width: 650px) {
   #events .event-left-card,
   #events .event-right-card,

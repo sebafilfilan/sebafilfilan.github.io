@@ -558,14 +558,15 @@ html[dir="rtl"] .experience-card {
   gap: 24px;
 }
     #events .event-center-card {
-  grid-column: 1 / -1;
-  justify-self: center;
-  width: calc(50% - 12px);
+  grid-column: 1 / -1 !important;
+  justify-self: center !important;
+  width: calc(50% - 12px) !important;
+}
 }
     @media (max-width: 650px) {
   #events .event-center-card {
-    grid-column: auto;
-    width: 100%;
+    grid-column: auto !important;
+    width: 100% !important;
   }
 }
     #certificates .volunteering-card:nth-child(5) {

@@ -610,7 +610,14 @@ border-color: #D8B583;
     width: 100% !important;
   }
 }
-    
+@media (max-width: 650px) {
+  #events,
+  #events .reveal {
+    opacity: 1 !important;
+    transform: none !important;
+    visibility: visible !important;
+  }
+}    
 .volunteering-card:nth-child(1) {
   order: 2;
 }
